@@ -51,3 +51,4 @@ int main() {
                     add(i, j, i+p, j), add(i, j, i, j+p);
     printf("%d", calc());
 }
+

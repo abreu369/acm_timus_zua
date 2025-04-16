@@ -1,5 +1,4 @@
 #define task A
-
 #include <iostream>
 #include <algorithm>
 
