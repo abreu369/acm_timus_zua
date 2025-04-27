@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 
-bool check(const std::vector<std::pair<int, int>>& p, size_t i)
-{
+bool check(const std::vector<std::pair<int, int>>& p, size_t i){
     const long long dx = p[i].first - p[0].first, dy = p[i].second - p[0].second;
 
     unsigned k = 0;
@@ -14,8 +13,7 @@ bool check(const std::vector<std::pair<int, int>>& p, size_t i)
     return 2 * k == p.size() - 2;
 }
 
-int main()
-{
+int main(){
     std::ios_base::sync_with_stdio(false);
     std::cin.tie(nullptr);
 

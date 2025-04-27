@@ -43,7 +43,7 @@ class Program{
         {
             var input = Console.ReadLine()?.Split();
             if (input == null || input.Length < 2)
-                throw new ArgumentException("Entrada inválida.");
+                throw new ArgumentException("Input Invalid.");
 
             int x = int.Parse(input[0]);
             int y = int.Parse(input[1]);

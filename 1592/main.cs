@@ -2,15 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-class Program
-{
-    static void Main()
-    {
+class Program{
+    static void Main(){
         uint n = uint.Parse(Console.ReadLine());
         List<uint> v = new List<uint>();
         
-        for (uint i = 0; i < n; i++)
-        {
+        for (uint i = 0; i < n; i++){
             string[] parts = Console.ReadLine().Split(':');
             uint h = uint.Parse(parts[0]);
             uint m = uint.Parse(parts[1]);
@@ -26,12 +23,10 @@ class Program
         uint mint = 0;
         uint prev = 0;
 
-        for (int i = 0; i < v.Count; i++)
-        {
+        for (int i = 0; i < v.Count; i++){
             uint current = v[i];
             sum += n * (current - prev) - 12 * 60 * 60;
-            if (sum < min)
-            {
+            if (sum < min){
                 min = sum;
                 mint = current;
             }

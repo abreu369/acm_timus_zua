@@ -15,7 +15,6 @@ vector<int> mt;
 vector<char> used;
 
 bool kuhn(int v) {
-    
     if(used[v]==1) return false;
     used[v] = true;
     for (int i=0; i<g[v].size(); i++) {

@@ -7,28 +7,22 @@ class Program{
     static int ls;
     static int beg;
 
-    static bool Cmp()
-    {
+    static bool Cmp(){
         if (ls == 0) return true;
 
-        foreach (var pattern in a)
-        {
+        foreach (var pattern in a){
             int al = pattern.Length;
-            if (ls >= al)
-            {
+            if (ls >= al){
                 bool match = true;
-                for (int j = 0; j < al; j++)
-                {
+                for (int j = 0; j < al; j++){
                     char chFromEnd = s[s.Length - beg - j - 1];
-                    if (chFromEnd != pattern[j])
-                    {
+                    if (chFromEnd != pattern[j]){
                         match = false;
                         break;
                     }
                 }
 
-                if (match)
-                {
+                if (match){
                     ls -= al;
                     beg += al;
                     return true;
@@ -38,13 +32,11 @@ class Program{
         return false;
     }
 
-    static void Main()
-    {
+    static void Main(){
         if (!int.TryParse(Console.ReadLine(), out int n))
             return;
 
-        for (int i = 0; i < n; i++)
-        {
+        for (int i = 0; i < n; i++){
             s = Console.ReadLine();
             ls = s.Length;
             beg = 0;

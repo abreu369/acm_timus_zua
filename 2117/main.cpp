@@ -1,17 +1,13 @@
 #include <iostream>
-
 #include <cmath>
-
 using integer = unsigned long long;
 
-integer square_root(integer n)
-{
+integer square_root(integer n){
     const integer x = sqrt(n);
     return x + (x * x < n);
 }
 
-integer solve(integer n)
-{
+integer solve(integer n){
     if (n == 0)
         return 1;
 
@@ -33,8 +29,7 @@ integer solve(integer n)
     return 1 + k / 2;
 }
 
-int main()
-{
+int main(){
     std::cin.tie(nullptr)->sync_with_stdio(false);
 
     integer n;
